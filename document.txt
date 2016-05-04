@@ -1,0 +1,116 @@
+﻿https://handy-theme.myshopify.com/
+
+2/
+<?php
+  /*
+    Template Name: posts
+  */
+?>
+ http://localhost/wordpress/posts/ ‎
+## khai bao cau truc template file nay danh cho pages nay.
+ 
+ 
+ 
+ 3/ file single.php
+ <?php get_header(); ?>
+  <div class="background-single">
+    <?php 
+      if (have_posts()) : the_post();
+        $category = get_the_category();
+        switch ($category[0]->slug) {
+          case 'tour':
+            include 'single-tour.php';
+            break;
+          
+          case 'hot_tour':
+            include 'single-tour.php';
+            break;         
+          default:
+            # code...
+            break;
+        }
+      endif;
+    ?>
+  </div>
+<?php get_footer(); ?>
+## posts sẽ vào single để chọn case có pages.
+
+
+4/ lấy title , content, ảnh , ngày tháng 
+- <?php the_title();?>
+<?php the_content();?>
+<?php the_post_thumbnail('ten anh minh cai dat');?>
+<?php the_time('l, F j, Y');?>
+l = Full name for day of the week (lower-case L).
+F = Full name for the month.
+j = The day of the month.
+Y = The year in 4 digits. (lower-case y gives the year's last 2 digits)
+
+/// dropdowwn
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+</body>
+</html>
+///// drop down menu css
+
+//// lọc danh sách trong query wordpess 
+'orderby' => date,
+'order' => DESC /// theo ngày mới nhất
+order => ASC /// theo ngay cũ nhất
+

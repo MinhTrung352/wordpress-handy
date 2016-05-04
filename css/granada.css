@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'granada-font';
+  src:url(//cdn.shopify.com/s/files/1/1195/5258/t/3/assets/granada-font.eot?16993818600220550167);
+  src:url(//cdn.shopify.com/s/files/1/1195/5258/t/3/assets/granada-font.eot?%23iefix&16993818600220550167) format('embedded-opentype'),
+    url(//cdn.shopify.com/s/files/1/1195/5258/t/3/assets/granada-font.woff?16993818600220550167) format('woff'),
+    url(//cdn.shopify.com/s/files/1/1195/5258/t/3/assets/granada-font.ttf?16993818600220550167) format('truetype'),
+    url(//cdn.shopify.com/s/files/1/1195/5258/t/3/assets/granada-font.svg?16993818600220550167) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
